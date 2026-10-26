@@ -161,7 +161,7 @@ $("themeToggleBtn").onclick=()=>{const n=document.documentElement.dataset.theme=
 const savedTheme=localStorage.getItem("redvault_theme")||"dark";document.documentElement.dataset.theme=savedTheme;paintThemeIcon(savedTheme);
 
 function applySettings(obj={}) {
- const map={main_ad_block:"adsBlockId",reward_ad_block:"rewardBlockId",reward_link:"rewardLink",reward_title:"rewardTitle",reward_desc:"rewardDesc",bot_username:"botUsername",tg_link:"tgLink",telegram_link:"tgLink",tg_title:"tgTitle",telegram_text:"tgTitle",tg_subtitle:"tgSubtitle",splash_brand:"splashBrand",splash_title:"splashTitle",header_brand:"headerBrand",header_sub:"headerSub",empty_text:"emptyText"};
+ const map={reward_link:"rewardLink",reward_title:"rewardTitle",reward_desc:"rewardDesc",bot_username:"botUsername",tg_link:"tgLink",telegram_link:"tgLink",tg_title:"tgTitle",telegram_text:"tgTitle",tg_subtitle:"tgSubtitle",splash_brand:"splashBrand",splash_title:"splashTitle",header_brand:"headerBrand",header_sub:"headerSub",empty_text:"emptyText"};
  Object.entries(map).forEach(([k,v])=>{if(obj[k])S[v]=obj[k]});
  if(obj.reward_coins_per_ad!=null)S.rewardCoinsPerAd=parseInt(obj.reward_coins_per_ad)||10;
  if(obj.reward_target!=null)S.rewardTarget=parseInt(obj.reward_target)||500;
